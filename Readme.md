@@ -72,6 +72,17 @@ It is a online shopping system
 
 域名分布： HTML -> www./admin. js+css -> s. image -> img.
 
+#### 职能划分
+
+后端：
+数据存储， 文件服务， 数据接口
+前端：
+数据请求，数据处理， 页面展示
+注意接口文档规范
+
+关于 Git：
+在用户根目录创建 .gitconfig 文件
+
 
 
 
