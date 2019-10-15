@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-15 17:23:55
+* @Last Modified time: 2019-10-16 09:38:26
 */
 
 const path              = require('path');
@@ -19,9 +19,9 @@ const getHtmlConfig = function(name) {
   return {
     template: `./src/view/${name}.html`,
     filename: `view/${name}.html`,
-    inject: true,
-    hash: true,
-    chunks: ['common', `${name}`]
+    inject  : true,
+    hash    : true,
+    chunks  : ['common', `${name}`]
   }
 }
 
@@ -29,12 +29,12 @@ const config = {
 
   entry: {
     'common': ['./src/page/common/index.js'],
-    'index': ['./src/page/index/index.js'],
-    'login': ['./src/page/login/index.js']
+    'index' : ['./src/page/index/index.js'],
+    'login' : ['./src/page/login/index.js']
   },
 
   devServer: {
-    port: 8088,
+    port  : 8088,
     inline: true,
     proxy : {
       '**/*.do' : {
@@ -45,9 +45,9 @@ const config = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path      : path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
-    filename: 'js/[name].js'
+    filename  : 'js/[name].js'
   },
   // deal with jquery import
   externals: {
@@ -57,22 +57,23 @@ const config = {
   module: {
     loaders: [
       { // deal with css style file
-        test: /\.css$/, 
+        test  : /\.css$/, 
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader') 
       },
       {
-        test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
+        test  : /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
         loader: 'url-loader?limit=100&name=resource/[name].[ext]'
       }
     ]
   },
 
+// 配置路径别名
   resolve: {
     alias: {
-      util : __dirname + '/src/util',
-      page: __dirname + '/src/page',
-      service: __dirname + '/src/service',
-      image: __dirname + '/src/image'
+      util    : __dirname + '/src/util',
+      page    : __dirname + '/src/page',
+      service : __dirname + '/src/service',
+      image   : __dirname + '/src/image'
     }
   },
 
