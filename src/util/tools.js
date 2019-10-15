@@ -2,9 +2,10 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 17:44:47
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 10:05:07
+* @Last Modified time: 2019-10-16 10:37:43
 */
 
+const Hogan = require('hogan.js');
 const conf   = {
   serverHost: ''
 };
@@ -76,6 +77,67 @@ const _tools = {
     const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
     const result = window.location.search.substr(1).match(reg);
     return result ? decodeURIComponent(result[2]) : null;
+  },
+
+  /**
+   * 渲染HTML模板，将数据和模板结合
+   * @param  {[type]} htmlTemplate [description]
+   * @param  {[type]} data         [description]
+   * @return {[type]}              [description]
+   */
+  renderHTML: function(htmlTemplate, data) {
+    // 编译
+    const template = Hogan.compile(htmlTemplate);
+    const result   = template.render(data);
+    return result;
+  },
+
+  /**
+   * 成功提示
+   * @param  {[type]} msg [description]
+   * @return {[type]}     [description]
+   */
+  successTips: function(msg) {
+    alert(msg || 'success');
+  },
+
+  /**
+   * 错误提示
+   * @param  {[type]} msg [description]
+   * @return {[type]}     [description]
+   */
+  errorTips: function(msg) {
+    alert(msg || 'some wrong');
+  },
+
+  /** 
+   * 字段验证，支持是否为空，包括手机邮箱
+   * @param  {[type]} str  [description]
+   * @param  {[type]} type [description]
+   * @return {[type]}      [description]
+   */
+  validate: function(input, type) {
+    const inputStr = $.trim(input);
+    // 非空验证
+    if('require' === type) {
+      return !!inputStr;
+    }
+    // 手机号验证
+    if('phone' === type) {
+      return /^1\d{10}$/.test(inputStr);
+    }
+    // 邮箱验证
+    if('email' === type) {
+      return /^[\w.\-]+@(?:[a-z0-9]+(?:-[a-z0-9]+)*\.)+[a-z]{2,3}$/.test(inputStr);
+    }
+  },
+
+  /**
+   * 跳转到主页
+   * @return {[type]} [description]
+   */
+  goHome: function() {
+    window.location.href = './index.html';
   }
   
 };

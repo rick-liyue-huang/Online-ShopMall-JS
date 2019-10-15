@@ -117,6 +117,7 @@ webpack -- 使用 1.15.0版本
 
 3. `git merge orign master`, `git tag tag-dev-initial`, `git push origin tag-dev-initial`.
 4. 后台的数据接口都在 test.happymmall.com
+5. `npm i hogan.js --save`, `const Hogan = require('hogan.js')`
 
 
 

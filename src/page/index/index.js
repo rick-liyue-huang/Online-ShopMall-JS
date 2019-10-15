@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 11:56:46
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 10:05:33
+* @Last Modified time: 2019-10-16 10:20:55
 */
 
 "use strict";
@@ -20,7 +20,13 @@ _tools.request({
 })
 */
 
-console.log(_tools.getUrlParam('test'));
+// console.log(_tools.getUrlParam('test'));
+
+const html = '<div>{{text}}</div>';
+const data = {
+  text: 123
+}
+console.log(_tools.renderHTML(html, data));
 
 
 
