@@ -2,15 +2,35 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 11:56:46
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-15 14:25:55
+* @Last Modified time: 2019-10-15 17:42:25
 */
 
 "use strict";
 
-var $$ = require('jquery');
+const _tools = require('util/tools.js');
 
-require('../module.js');
-require('./index.css');
+// _tools.request({
+//   url: '/product/list.do?keyword=1',
+//   // success: function(res) {
+//   //   console.log(res);
+//   // },
+//   error: function(errmsg) {
+//     console.log(errmsg);
+//   }
+// });
 
-console.log("hello index");
-// $$('body').html('index hello.....');
+// _tools.getUrlParam('test');
+console.log(_tools.getUrlParam('test'));
+
+
+
+
+
+
+
+
+
+
+
+
+

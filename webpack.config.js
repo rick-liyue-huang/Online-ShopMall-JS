@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-15 14:24:11
+* @Last Modified time: 2019-10-15 17:23:55
 */
 
 const path              = require('path');
@@ -33,6 +33,17 @@ const config = {
     'login': ['./src/page/login/index.js']
   },
 
+  devServer: {
+    port: 8088,
+    inline: true,
+    proxy : {
+      '**/*.do' : {
+          target: 'http://test.happymmall.com',
+          changeOrigin : true
+      }
+    }
+  },
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
@@ -54,6 +65,15 @@ const config = {
         loader: 'url-loader?limit=100&name=resource/[name].[ext]'
       }
     ]
+  },
+
+  resolve: {
+    alias: {
+      util : __dirname + '/src/util',
+      page: __dirname + '/src/page',
+      service: __dirname + '/src/service',
+      image: __dirname + '/src/image'
+    }
   },
 
   plugins: [
