@@ -91,6 +91,20 @@ It is a online shopping system
 
 
 
+notes:
+1. 因为本电脑安装了 nvm node版本管理工具，因此我这里使用了 6.17.1 版本，而 npm 使用了 3.10 全局安装目录: “/Users/mac/.nvm/versions/node/v6.17.1/lib”, 本地安装目录: "/Users/mac/Documents/gitgarden/Online-ShopMall-JS"
+具体配置: "https://github.com/webpack/docs/wiki/contents"
+webpack -- 使用 1.15.0版本
+设计思想 -- require anything
+加载方式 -- 各种 loader 插件
+编译方式 -- commonjs模块 -> function 类型模块
+
+2. fileHeader 插件 用于处理文件创建时候的说明文字 by `command+option+a`
+
+
+
+
+
 
 
 
