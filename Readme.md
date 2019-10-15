@@ -83,6 +83,10 @@ It is a online shopping system
 关于 Git：
 在用户根目录创建 .gitconfig 文件
 
+#### Develop
+
+首先需要切换到其他分支开发 `git checkout -b onlineshope_v1.0` 
+
 
 
 
