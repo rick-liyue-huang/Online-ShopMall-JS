@@ -1,0 +1,48 @@
+/*
+* @Author: RickHuang
+* @Date:   2019-10-16 13:30:02
+* @Last Modified by:   RickHuang
+* @Last Modified time: 2019-10-16 14:01:42
+*/
+
+/* 通用头部导航 */
+.header .logo {
+  position: absolute;
+  display: block;
+  font-size: 36px;
+  color: #c60023;
+  left: 60px;
+  top: 34px;
+  font-weight: bold;
+}
+
+.header .search-con {
+  padding: 40px 0 30px 250px;
+}
+
+.header .search-con .search-input {
+  width: 550px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 15px;
+  border: 2px solid #c60023;
+  outline: none;
+}
+
+.header .search-con .search-btn {
+  /* absolute 脱离文档流，会以上一个元素的末尾为起始位置*/
+  position: absolute;
+  height: 46px;
+  width: 96px;
+}
+
+
+
+
+
+
+
+
+
+

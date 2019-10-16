@@ -2,12 +2,13 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 11:56:46
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 12:07:43
+* @Last Modified time: 2019-10-16 14:04:07
 */
 
 "use strict";
 
 const _tools = require('util/tools.js');
+require('page/common/header/index.js');
 require('page/common/nav/index.js');
 
 /*

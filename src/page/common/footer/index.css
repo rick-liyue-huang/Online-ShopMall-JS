@@ -1,0 +1,37 @@
+/*
+* @Author: RickHuang
+* @Date:   2019-10-16 13:13:58
+* @Last Modified by:   RickHuang
+* @Last Modified time: 2019-10-16 13:16:57
+*/
+
+/* footer style */
+
+.footer {
+  padding-bottom: 10px;
+}
+.footer .links {
+  text-align: center;
+  color: #666;
+  line-height: 30px;
+}
+
+.footer .links .link {
+  padding: 0 10px;
+}
+
+.footer .copyright {
+  text-align: center;
+  color: #666;
+  line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
