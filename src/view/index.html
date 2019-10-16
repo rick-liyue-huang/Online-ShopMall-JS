@@ -3,7 +3,7 @@
 <head>
   <!-- import the common html file to the current html file -->
   <%= require('html-loader!./layout/head-common.html') %>
-  <title>Home</title>
+  <title><%= htmlWebpackPlugin.options.title%> - Shop</title>
 </head>
 
 <body>

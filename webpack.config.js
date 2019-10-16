@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 15:39:41
+* @Last Modified time: 2019-10-16 16:08:04
 */
 
 const path              = require('path');
@@ -15,10 +15,11 @@ var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV);
 
 // get html-webpack-plugin args
-const getHtmlConfig = function(name) {
+const getHtmlConfig = function(name, title) {
   return {
     template: `./src/view/${name}.html`,
     filename: `view/${name}.html`,
+    title   : title,
     inject  : true,
     hash    : true,
     chunks  : ['common', `${name}`]
@@ -28,9 +29,10 @@ const getHtmlConfig = function(name) {
 const config = {
 
   entry: {
-    'common': ['./src/page/common/index.js'],
-    'index' : ['./src/page/index/index.js'],
-    'login' : ['./src/page/login/index.js']
+    'common' : ['./src/page/common/index.js'],
+    'index'  : ['./src/page/index/index.js'],
+    'login'  : ['./src/page/login/index.js'],
+    'result' : ['./src/page/result/index.js']
   },
 
   devServer: {
@@ -91,8 +93,9 @@ const config = {
     // 把css单独打包到文件里
     new ExtractTextPlugin('css/[name].css'),
     // 处理HTML模板
-    new HtmlWebpackPlugin(getHtmlConfig('index')),
-    new HtmlWebpackPlugin(getHtmlConfig('login')),
+    new HtmlWebpackPlugin(getHtmlConfig('index', 'Home')),
+    new HtmlWebpackPlugin(getHtmlConfig('login', 'Login')),
+    new HtmlWebpackPlugin(getHtmlConfig('result', 'Result')),
   ]
 
 };

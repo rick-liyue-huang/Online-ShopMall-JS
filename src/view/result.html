@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%> - Shop</title>
+</head>
+
+<body>
+  <%= require('html-loader!./layout/nav-simple.html') %>
+  
+  <div class="page-wrap w">
+    <div class="result-con register-success">
+      <h1 class="result-title">Congraduation, Register</h1>
+      <div class="result-content">
+        <a href="./index.html" class="link">Go Back</a>
+      </div>
+    </div>
+    <div class="result-con default-success">
+      <h1 class="result-title">Congraduation, Default</h1>
+      <div class="result-content">
+        <a href="./index.html" class="link">Go Back</a>
+      </div>
+    </div>
+  </div>
+  <%= require('html-loader!./layout/footer-common.html') %>
+</body>
+</html>
