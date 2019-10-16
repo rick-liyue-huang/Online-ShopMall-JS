@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 09:38:26
+* @Last Modified time: 2019-10-16 11:37:19
 */
 
 const path              = require('path');
@@ -70,10 +70,11 @@ const config = {
 // 配置路径别名
   resolve: {
     alias: {
-      util    : __dirname + '/src/util',
-      page    : __dirname + '/src/page',
-      service : __dirname + '/src/service',
-      image   : __dirname + '/src/image'
+      util        : __dirname + '/src/util',
+      page        : __dirname + '/src/page',
+      service     : __dirname + '/src/service',
+      image       : __dirname + '/src/image',
+      node_modules: __dirname + '/node_modules'
     }
   },
 

@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- import the common html file to the current html file -->
-<%= require('html-loader!./layout/html-head.html') %>
+<head>
+  <!-- import the common html file to the current html file -->
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title>Home</title>
+</head>
+
 <body>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="../../dist/js/base.js"></script>
-  <script type="text/javascript" src="../../dist/js/index.js"></script> -->
-  hello dev-server
+  <div>
+    <a class="link" href="">ok</a>
+  </div>
+  <div>
+    <a href="" class="btn">test</a>
+    <a href="" class="btn btn-mini">test</a>
+  </div>
+  <div>
+    <a href="" class="loading"></a>
+  </div>
+  <div>
+    <i class="fa fa-user"></i>
+  </div>
+  <%= require('html-loader!./layout/footer-common.html') %>
 </body>
 </html>

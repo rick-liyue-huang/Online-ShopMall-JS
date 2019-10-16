@@ -1,0 +1,150 @@
+/*
+* @Author: RickHuang
+* @Date:   2019-10-16 10:39:36
+* @Last Modified by:   RickHuang
+* @Last Modified time: 2019-10-16 11:31:03
+*/
+
+/*
+  通用布局开发
+ */
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background: #f6f6f6;
+  font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+/* 定宽布局 */
+.w {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  /*清除浮动*/
+  overflow: hidden;
+}
+
+/* 参考media 查询*/
+
+/* 全局通用样式 */
+
+/* 隐藏 */
+.hide {
+  display: none;
+}
+
+/* 超链接样式 */
+.link {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #e80012;
+}
+
+.link-text {
+  color: #999;
+  text-decoration: none;
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  border: none;
+  background: #c60023;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-mini {
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.loading {
+  margin: 10px auto;
+  display: block;
+  width: 65px;
+  height: 65px;
+  background: url(../../image/icon/loading.gif) no-repeat;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  opacity: .6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
