@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 11:37:19
+* @Last Modified time: 2019-10-16 15:39:41
 */
 
 const path              = require('path');
@@ -63,6 +63,10 @@ const config = {
       {
         test  : /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
         loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+      },
+      {
+        test  : /\.string$/,
+        loader: 'html-loader'
       }
     ]
   },
