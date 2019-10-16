@@ -1,0 +1,47 @@
+/*
+* @Author: RickHuang
+* @Date:   2019-10-16 12:06:59
+* @Last Modified by:   RickHuang
+* @Last Modified time: 2019-10-16 12:14:08
+*/
+
+.nav {
+  background-color: #eee;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* left user part */
+.nav .user {
+  float: left;
+}
+.nav .user .link {
+  margin-right: 5px;
+}
+.nav .user.login {
+  display: none;
+}
+/* right nav part */
+.nav .nav-list {
+  float: right;
+}
+
+.nav .nav-list .nav-item {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
