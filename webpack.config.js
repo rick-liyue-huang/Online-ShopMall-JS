@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 12:07:05
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 16:08:04
+* @Last Modified time: 2019-10-17 13:29:12
 */
 
 const path              = require('path');
@@ -31,7 +31,7 @@ const config = {
   entry: {
     'common' : ['./src/page/common/index.js'],
     'index'  : ['./src/page/index/index.js'],
-    'login'  : ['./src/page/login/index.js'],
+    'login'  : ['./src/page/user-login/index.js'],
     'result' : ['./src/page/result/index.js']
   },
 
@@ -94,7 +94,7 @@ const config = {
     new ExtractTextPlugin('css/[name].css'),
     // 处理HTML模板
     new HtmlWebpackPlugin(getHtmlConfig('index', 'Home')),
-    new HtmlWebpackPlugin(getHtmlConfig('login', 'Login')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login', 'Login')),
     new HtmlWebpackPlugin(getHtmlConfig('result', 'Result')),
   ]
 

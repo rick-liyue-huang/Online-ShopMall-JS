@@ -2,7 +2,7 @@
 * @Author: RickHuang
 * @Date:   2019-10-15 17:44:47
 * @Last Modified by:   RickHuang
-* @Last Modified time: 2019-10-16 10:37:43
+* @Last Modified time: 2019-10-17 13:32:30
 */
 
 const Hogan = require('hogan.js');
@@ -54,7 +54,7 @@ const _tools = {
 
   doLogin: function() {
     // 登录后在跳转到之前的页面，如果有特殊字符的话会截断，因此需要编码
-    window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+    window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
   },
 
   /**
